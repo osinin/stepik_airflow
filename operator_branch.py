@@ -20,6 +20,7 @@ def branch_func(**kwargs):
     else:
         return 'small_task'
 
+
 with DAG(dag_id='operator_branch',
          default_args={'owner': 'u_m1dxa'},
          schedule_interval='30 22 * * *',
