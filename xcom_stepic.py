@@ -6,6 +6,7 @@ from airflow.operators.python_operator import PythonOperator
 args = {'owner': 'airflow',
         'start_date': days_ago(1),
         'provide_context': True}
+
 dag = DAG('xcom_stepic',
           schedule_interval='@once',
           default_args=args,

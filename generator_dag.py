@@ -9,7 +9,8 @@ def create_dag(dag_id,
 
     dag = DAG(dag_id,
               schedule_interval=schedule,
-              default_args=default_args)
+              default_args=default_args,
+              tags=['stepik'])
 
     with dag:
         t1 = DummyOperator(task_id=f'task', dag=dag)
