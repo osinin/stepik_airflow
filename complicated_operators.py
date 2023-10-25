@@ -113,6 +113,8 @@ with DAG(
                 dag=dag,
             )
 
+            create_sandbox_task >> script_group >> replace_partitions_task >> drop_sandbox_task
+
             groups.append(tg)
 
     eid = []
@@ -148,6 +150,8 @@ with DAG(
             task_id=f'drop_sandbox',
             dag=dag
         )
+
+        create_sandbox_task >> script_group >> replace_partitions_task >> drop_sandbox_task
 
     eid.append(eid_tg)
 
