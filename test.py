@@ -1,5 +1,15 @@
-for dag_number in range(1, 4):
-    dag_id = f'generator_dag_{dag_number}'
-    print(dag_id)
-    globals()[dag_id] = f'lol_{dag_number}'
-    print(globals()[dag_id])
+from ast import literal_eval
+
+a = 202311
+print(type(a))
+if type(a) is not list:
+    a = [str(a)]
+    print(a, type(a))
+
+
+number = literal_eval("42")
+print(number, type(number))
+string = literal_eval("'Hello, World!'")
+print(string, type(string))
+list_obj = literal_eval("[1, 2, 3]")
+print(list_obj, type(list_obj))

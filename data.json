@@ -1,0 +1,20 @@
+[
+  {
+    "schema": "ods",
+    "table": "operations_b2c_w_finance",
+    "column_to_check": "date_uz",
+    "target_actuality": 1
+  },
+  {
+    "schema": "raw",
+    "table": "currency_rates_official",
+    "column_to_check": "source_dt",
+    "target_actuality": 0
+  },
+  {
+    "schema": "marts",
+    "table": "uzumbank_overview_report",
+    "column_to_check": "date",
+    "target_actuality": 1
+  }
+]
